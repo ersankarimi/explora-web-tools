@@ -1,6 +1,6 @@
 {
-  "name": "template-vite-react-tailwind-v3",
-  "version": "0.0.0",
+  "name": "explora-web-tools",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
