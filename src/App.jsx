@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { Home } from '@pages'
 
 const App = () => {
-  return (
-    <div className="text-center selection:bg-green-900">
-      <header className="flex min-h-screen flex-col items-center justify-center bg-[#282c34] text-white">
-        <h1 className="bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-5xl font-black text-transparent selection:bg-transparent">
-          Explora web tools
-        </h1>
-      </header>
-    </div>
-  );
-};
+    return (
+        <div className="container min-h-screen min-w-full max-w-full bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-2">
+            <Routes>
+                <Route path={'/'} element={<Home />}></Route>
+            </Routes>
+        </div>
+    )
+}
 
-export default App;
+export default App
