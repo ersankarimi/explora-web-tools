@@ -1,0 +1,11 @@
+.sidebar__dropdown-item {
+    @apply text-white;
+}
+
+.sidebar__dropdown-collapse {
+    @apply my-2 ml-5 flex w-full flex-col justify-between gap-2 px-4 py-2;
+}
+
+.sidebar__dropdown-collapse-item {
+    @apply p-1 font-inter text-sm text-white-65;
+}
