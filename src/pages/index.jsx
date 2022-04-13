@@ -1,3 +1,1 @@
-import Home from './home/Home'
-
-export { Home }
+export * from './routes'
