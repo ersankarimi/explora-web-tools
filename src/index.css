@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply overflow-x-hidden;
+}
+
+@layer components {
+    #root {
+        @apply relative
+        bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-2;
+        min-width: 98.72vw;
+        display: flex;
+    }
+}
