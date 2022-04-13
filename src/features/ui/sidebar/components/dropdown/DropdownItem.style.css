@@ -1,3 +1,7 @@
+.sidebar__dropdown-button {
+    @apply hover:bg-slate-50/10;
+}
+
 .sidebar__dropdown-item {
     @apply text-white;
 }
@@ -7,5 +11,5 @@
 }
 
 .sidebar__dropdown-collapse-item {
-    @apply p-1 font-inter text-sm text-white-65;
+    @apply my-1 p-1 font-inter text-xs duration-100 ease-in hover:pl-3 md:text-sm;
 }
