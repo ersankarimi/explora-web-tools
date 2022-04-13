@@ -3,23 +3,23 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                //Neutral
+                // * Neutral
                 'white-100': '#FAFAFA',
                 'white-80': 'rgba(250,250,250,.8)',
                 'white-65': 'rgba(250,250,250,.65)',
 
-                //Primary
+                // * Primary
                 'main-bg-dark-1': '#181C27',
                 'main-bg-dark-2': '#394253',
                 'main-card-dark-1': '#2C3341',
                 'main-card-dark-2': '#313949',
                 'main-sidebar-dark': '#313949',
 
-                //Accent
+                // * Accent
                 purple: '#5219CF',
                 coral: '#FFAB91',
 
-                //Stroke
+                // * Stroke
                 'item-stroke': 'rgba(49,57,73,0.5)'
             },
             boxShadow: {
