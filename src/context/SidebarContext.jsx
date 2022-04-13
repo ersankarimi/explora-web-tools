@@ -4,7 +4,8 @@ import React, { createContext, useState } from 'react'
 export const SidebarContext = createContext()
 
 export const SidebarContextProvider = ({ children }) => {
-    const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
+    const viewport = window.innerWidth
+    const [sidebarIsOpen, setSidebarIsOpen] = useState(viewport <= 639 ? false : true)
 
     const toggleSidebar = () => {
         setSidebarIsOpen((condition) => !condition)
