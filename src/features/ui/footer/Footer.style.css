@@ -1,0 +1,3 @@
+.footer {
+    @apply flex min-w-full items-center justify-between p-4 font-poppins text-white shadow-item-shadow backdrop-blur-sm;
+}
