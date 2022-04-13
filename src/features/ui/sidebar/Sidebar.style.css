@@ -1,32 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.sidebar {
+    @apply flex w-screen sm: w-full;
+}
 
-@layer components {
-    .sidebar {
-        /**
-        * TODO : Saat lebar lebar viewport dibawah md, beri class w-screen pada class sidebar. Jika diatas md ukuran lebar viewport hapus w-screen pada class sidebar.
-        
-        */
+.sidebar__nav {
+    @apply flex h-screen w-full flex-col overflow-hidden bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-2 text-white shadow-sidebar-shadow;
+}
 
-        @apply flex;
-    }
+.sidebar__header {
+    @apply mt-4 mb-8 p-4 text-center font-poppins text-base font-bold text-white-100 lg: text-xl;
+}
 
-    .sidebar__nav {
-        @apply flex h-screen
-         w-full flex-col overflow-hidden bg-gradient-to-b from-main-bg-dark-1
-        to-main-bg-dark-2 text-white shadow-sidebar-shadow;
-    }
-
-    .sidebar__header {
-        @apply mt-4 mb-8  p-4 text-center font-poppins text-base font-bold text-white-100 lg:text-xl;
-    }
-
-    /* overlay */
-    /**
-        * TODO : Saat lebar lebar viewport dibawah md, beri hapus class hidden  pada class sidebar__overlay. Jika diatas md ukuran lebar viewport hapus class hidden pada class overlay.
-    */
-    .sidebar__overlay {
-        @apply hidden h-screen bg-black/40;
-    }
+.sidebar__overlay {
+    @apply visible h-screen min-w-[50%] bg-black/60 sm: hidden;
 }
