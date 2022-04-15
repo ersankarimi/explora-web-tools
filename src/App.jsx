@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import { Header, Sidebar, Footer } from '@features/ui'
+import { Navbar, Sidebar, Footer } from '@features/ui'
 import { motion } from 'framer-motion'
 import { useSidebar } from '@hooks'
 import './App.style.css'
@@ -36,7 +36,7 @@ const App = () => {
                 <Sidebar />
             </motion.div>
             <div className="container__content" style={{ minHeight: '100vh' }}>
-                <Header />
+                <Navbar />
                 <div className="container__content-main">
                     {/* // * Render Outlet */}
                     <Outlet />

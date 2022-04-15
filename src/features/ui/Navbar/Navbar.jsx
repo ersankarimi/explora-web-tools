@@ -1,13 +1,13 @@
 import React from 'react'
 import { DoubleArrow } from './components'
-import './Header.style.css'
+import './Navbar.style.css'
 
-const Header = () => {
+const Navbar = () => {
     return (
-        <header className={'header'}>
+        <header className={'navbar'}>
             <DoubleArrow />
         </header>
     )
 }
 
-export default Header
+export default Navbar

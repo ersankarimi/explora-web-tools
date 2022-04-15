@@ -6,7 +6,7 @@ import { useSidebar } from '@hooks'
 const DoubleArrow = () => {
     const [sidebarIsOpen, toggleSidebar] = useSidebar(SidebarContext)
 
-    // variants motion double arrow
+    // variants motion for double arrow
     const variants = {
         notOpen: {
             x: [10, -50, 0],
