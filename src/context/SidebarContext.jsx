@@ -1,11 +1,16 @@
 import React, { createContext, useState } from 'react'
 
-// initialize context
 export const SidebarContext = createContext()
 
+/**
+ *
+ * @param {children} children - the children of the component.
+ * @returns {any} SidebarContext.Provider - the provider of the context,
+ * and the value of context type is array and the value is sidebarIsOpen and toggleSidebar function.
+ */
 export const SidebarContextProvider = ({ children }) => {
-    const viewport = window.innerWidth
-    const [sidebarIsOpen, setSidebarIsOpen] = useState(viewport <= 639 ? false : true)
+    const { innerWidth } = window
+    const [sidebarIsOpen, setSidebarIsOpen] = useState(innerWidth <= 639 ? false : true)
 
     const toggleSidebar = () => {
         setSidebarIsOpen((condition) => !condition)
