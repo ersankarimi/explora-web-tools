@@ -1,7 +1,16 @@
 import React from 'react'
+import { Homepage } from '@features/HomePage'
 
+/**
+ *
+ * @returns {any} HomePage - the component.
+ */
 const Home = () => {
-    return <h1>asdasdasdasdas</h1>
+    return (
+        <>
+            <Homepage />
+        </>
+    )
 }
 
 export default Home

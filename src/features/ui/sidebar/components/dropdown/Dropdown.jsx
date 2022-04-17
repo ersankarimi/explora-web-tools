@@ -1,7 +1,11 @@
 import React from 'react'
-import { dropdownItemData } from './dropdownData'
+import { dropdownItemData } from './Dropdown.data'
 import DropdownItem from './DropdownItem'
 
+/**
+ * * Returns a Dropdown component.
+ * @returns {any} of the Dropdown component.
+ */
 const Dropdown = () => {
     return (
         <ul className={'sidebar__dropdown'}>

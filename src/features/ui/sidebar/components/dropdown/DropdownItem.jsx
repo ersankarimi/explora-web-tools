@@ -6,15 +6,41 @@ import './DropdownItem.style.css'
 import ButtonDropdown from './ButtonDropdown'
 import { ArrowSidebar } from '../ArrowSidebar'
 
+/**
+ *
+ * @param {name} name - The name of the component.
+ * @param {item} item - The item of every dropdown button  .
+ * @param {path} path - The URL path of the component.
+ * @returns {any} of the DropdownItem component.
+ */
+
 const DropdownItem = ({ name, item, path }) => {
+    /**
+     * @constant
+     * @type {boolean} represents the state of the sidebar
+     * @default false
+     */
     const [dropdownIsOpen, setDropdownIsOpen] = useState(false)
+
+    /**
+     * @constant
+     * @type {function} represents the function to toggle the sidebar
+     * @default useSidebar(SidebarContext)
+     */
     const [toggleSidebar] = useSidebar()
 
+    /**
+     * * Sets the state of the sidebar.
+     */
     const handleDropdownOpen = () => {
         setDropdownIsOpen((condition) => !condition)
     }
 
-    // * This function will handle close and open the sidebar when click the link in dropdown
+    /**
+     * * Sets the state of the sidebar if window screen <= 639.
+     * * If the window screen is less than 639px,
+     * * return a toggleSidebar() function.
+     */
     const handleCloseSidebar = () => {
         const { width } = window.screen
         width <= 639 && toggleSidebar()
@@ -53,7 +79,7 @@ const DropdownItem = ({ name, item, path }) => {
                             style={({ isActive }) => {
                                 return {
                                     color: isActive
-                                        ? 'rgba(250,250,250,.80)'
+                                        ? 'rgba(250,250,250,1)'
                                         : 'rgba(250,250,250,.60)'
                                 }
                             }}
