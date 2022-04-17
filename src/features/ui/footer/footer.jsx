@@ -2,6 +2,10 @@ import React from 'react'
 import { GithubIcon } from './components'
 import './Footer.style.css'
 
+/**
+ * * Returns a Footer component.
+ * @returns {any} of the Footer component.
+ */
 const Footer = () => {
     return (
         <footer className={'footer'}>
