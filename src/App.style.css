@@ -13,6 +13,6 @@
     }
 
     .container__content-main {
-        @apply relative h-full overflow-y-auto p-4;
+        @apply relative h-full overflow-y-auto p-4 lg:py-4 lg:px-12;
     }
 }
