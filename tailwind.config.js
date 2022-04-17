@@ -16,8 +16,8 @@ module.exports = {
                 'main-sidebar-dark': '#313949',
 
                 // * Accent
-                purple: '#5219CF',
-                coral: '#FFAB91',
+                'purple-accent': '#5219CF',
+                'coral-accent': '#FFAB91',
 
                 // * Stroke
                 'item-stroke': 'rgba(49,57,73,0.5)'
