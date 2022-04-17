@@ -3,9 +3,27 @@ import { motion } from 'framer-motion'
 import { SidebarContext } from '@context'
 import { useSidebar } from '@hooks'
 
+/**
+ * * Returns a DoubleArrow component
+ * @returns {any} of the DoubleArrow component
+ */
+
 const DoubleArrow = () => {
+    /**
+     * @constant
+     * @type {boolean} represents the state of the sidebar
+     * @default true when the viewport is greater than 639px
+     *
+     * @constant
+     * @type {function} represents the function to toggle the sidebar
+     */
     const [sidebarIsOpen, toggleSidebar] = useSidebar(SidebarContext)
 
+    /**
+     * @constant
+     * @type {object} represents the motion object
+     * @default motion object
+     */
     // variants motion for double arrow
     const variants = {
         notOpen: {
