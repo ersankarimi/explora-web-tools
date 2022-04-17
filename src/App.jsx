@@ -5,15 +5,37 @@ import { motion } from 'framer-motion'
 import { useSidebar } from '@hooks'
 import './App.style.css'
 
+/**
+ * @returns {any} App - the main component.
+ */
 const App = () => {
+    /**
+     * @constant
+     * @type {boolean} represents the state of the sidebar
+     * @default true when the viewport is greater than 639px
+     *
+     * @constant
+     * @type {function} represents the function to toggle the sidebar
+     * @default useSidebar(SidebarContext)
+     */
     const [sidebarIsOpen, toggleSidebar] = useSidebar()
 
+    /**
+     * * Returns a toggleSedebar function,
+     * * if the innerWidth is <= 639px and,
+     * *  target event doesn't have the className 'sidebar__dropdown-button' and 'arrow-button4.
+     */
     const handleWindowResize = () => {
         const viewport = window.innerWidth
         viewport > 640 && !sidebarIsOpen && toggleSidebar()
         viewport <= 639 && sidebarIsOpen && toggleSidebar()
     }
 
+    /**
+     * * Adds the event listener to the window resize event
+     * * and calls the handleWindowResize function
+     * * when the component is mounted.
+     */
     useEffect(() => {
         window.addEventListener('resize', handleWindowResize)
         return () => {
@@ -38,8 +60,6 @@ const App = () => {
             <div className="container__content" style={{ minHeight: '100vh' }}>
                 <Navbar />
                 <div className="container__content-main">
-                    {/* // * Render Outlet */}
-                    <Outlet />
                     <Outlet />
                 </div>
                 <Footer />
