@@ -1,5 +1,11 @@
 import React from 'react'
 
+/**
+ *
+ * * Retunrs a GithubIcon components.
+ * @returns {any} of the GithubIcon component.
+ */
+
 const GithubIcon = () => {
     return (
         <a href="https://github.com/ersankarimi/explora-web-tools">
