@@ -1,5 +1,5 @@
 .under-construction {
-    @apply flex flex-col items-center justify-center;
+    @apply flex h-full flex-col items-center justify-center;
 }
 
 .under-construction_message {
