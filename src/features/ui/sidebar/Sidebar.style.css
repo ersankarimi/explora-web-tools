@@ -13,5 +13,5 @@
 }
 
 .sidebar__overlay {
-    @apply visible h-screen min-w-[50%] bg-black/60 sm:hidden;
+    @apply visible h-screen min-w-[50%] bg-black/60 backdrop-blur-lg sm:hidden;
 }

@@ -1,5 +1,5 @@
 .card-item {
-    @apply mr-8 mt-8 flex h-72 max-h-max max-w-sm flex-col justify-between rounded-lg border-item-stroke bg-gradient-to-b from-main-card-dark-1 to-main-card-dark-2 shadow-item-shadow lg:max-h-64 lg:flex-row;
+    @apply mr-8 mt-8 flex h-72 max-h-max max-w-sm flex-col justify-between rounded-lg border-[1px] border-item-stroke bg-gradient-to-b from-main-card-dark-1 to-main-card-dark-2 shadow-item-shadow lg:max-h-64 lg:flex-row;
 }
 
 .card-item__text {

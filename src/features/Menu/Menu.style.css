@@ -1,0 +1,9 @@
+.menu {
+    @apply py-4 px-12;
+}
+.menu__header {
+    @apply font-poppins text-4xl font-extrabold tracking-wide text-white-100 lg:text-5xl;
+}
+.menu__card {
+    @apply mt-12 flex flex-col items-start sm:flex-row;
+}
