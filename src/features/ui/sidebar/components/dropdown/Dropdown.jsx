@@ -1,5 +1,5 @@
 import React from 'react'
-import { dropdownItemData } from './Dropdown.data'
+import { useDataContent } from '@hooks'
 import DropdownItem from './DropdownItem'
 
 /**
@@ -7,9 +7,11 @@ import DropdownItem from './DropdownItem'
  * @returns {any} of the Dropdown component.
  */
 const Dropdown = () => {
+    const dataContent = useDataContent()
+
     return (
         <ul className={'sidebar__dropdown'}>
-            {dropdownItemData.map((el, i) => (
+            {dataContent.map((el, i) => (
                 <DropdownItem {...el} key={i + 1} />
             ))}
         </ul>
