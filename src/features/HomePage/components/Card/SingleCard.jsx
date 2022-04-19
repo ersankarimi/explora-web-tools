@@ -10,11 +10,11 @@ import './SingleCard.style.css'
  * @param extraClass Is an additional class for the card.
  * @returns {any} of the SIngleCard component.
  */
-const SingleCard = ({ header, description, path, extraClass }) => {
+const SingleCard = ({ title, description, path, extraClass }) => {
     return (
         <div className="card-item">
             <div className="card-item__text">
-                <h1 className="card-item__header">{header}</h1>
+                <h1 className="card-item__header">{title}</h1>
                 <p className="card-item__description mb-4">{description}</p>
                 <button type="button" className={`btn-card ${extraClass}`}>
                     <Link to={path} className="card-item__link">
