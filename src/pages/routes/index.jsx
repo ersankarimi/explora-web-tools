@@ -1,3 +1,4 @@
-import Home from './home/Home'
+import Home from './Home/Home'
+import MenuSection from './MenuSection/MenuSection'
 
-export { Home }
+export { Home, MenuSection }
