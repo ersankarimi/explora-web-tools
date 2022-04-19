@@ -23,7 +23,7 @@ const Sidebar = () => {
 
     /**
      * * Returns a toggleSedebar function,
-     * * if the innerWidth is <= 639px and,
+     * * if the innerWidth is <= 767px and,
      * *  target event doesn't have the className 'sidebar__dropdown-button' and 'arrow-button4.
      * @param {e} e - The event object.
      * @type {number} innerWidth - The innerWidth of the window.
@@ -32,7 +32,7 @@ const Sidebar = () => {
      */
     const handleShowHiddenSidebar = (e) => {
         const { innerWidth } = window
-        innerWidth <= 639 &&
+        innerWidth <= 767 &&
             sidebarIsOpen &&
             !e.target.classList.contains('sidebar__dropdown-button') &&
             !e.target.classList.contains('arrow-dropdown') &&
