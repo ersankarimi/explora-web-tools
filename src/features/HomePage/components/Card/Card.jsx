@@ -1,6 +1,6 @@
 import React from 'react'
 import './Card.style.css'
-import { cardData } from './Card.data'
+import { useDataContent } from '@hooks'
 import SingleCard from './SingleCard'
 
 /**
@@ -8,9 +8,10 @@ import SingleCard from './SingleCard'
  * @returns {any} of the Card component.
  */
 const Card = () => {
+    const dataContent = useDataContent()
     return (
         <div className="card">
-            {cardData.map((item, i) => {
+            {dataContent.map((item, i) => {
                 return <SingleCard {...item} key={i} />
             })}
         </div>
