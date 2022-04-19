@@ -26,9 +26,9 @@ const App = () => {
      * *  target event doesn't have the className 'sidebar__dropdown-button' and 'arrow-button4.
      */
     const handleWindowResize = () => {
-        const viewport = window.innerWidth
-        viewport > 640 && !sidebarIsOpen && toggleSidebar()
-        viewport <= 639 && sidebarIsOpen && toggleSidebar()
+        const { innerWidth } = window
+        innerWidth > 767 && !sidebarIsOpen && toggleSidebar()
+        innerWidth <= 767 && sidebarIsOpen && toggleSidebar()
     }
 
     /**
