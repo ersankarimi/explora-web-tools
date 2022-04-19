@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { MenuCard } from './components/MenuCard'
 import './Menu.style.css'
+import { UnderConstructions } from '@features/ui'
 
 /**
  * * Returns a Menu component.
@@ -30,12 +31,6 @@ const Menu = () => {
     const filteredData = dataContent.filter((el) => el.path === sectionPath.replace('/', ''))
 
     /**
-     * @constant
-     * @type {string} title - the title of the current section
-     */
-    const { title } = filteredData[0]
-
-    /**
      * @type {object} parentVariants - object of the parent variants motion.
      */
     const parentVariants = {
@@ -57,16 +52,34 @@ const Menu = () => {
         }
     }
 
+    /**
+     * @constant
+     * @type {string} title - the title of the current section
+     * @type {items} items - the items of the current section
+     */
+    const { title, items } = filteredData[0]
+
     return (
         <motion.div className="menu" variants={parentVariants} initial="hidden" animate="visible">
-            <h1 className="menu__header">{title}</h1>
-            <div className="menu__card">
-                {filteredData.map((el, i) =>
-                    el.items.map((item, j) => {
-                        return <MenuCard key={i + j} {...el} title={item} i={i + j} />
-                    })
-                )}
-            </div>
+            {!items.length ? (
+                <UnderConstructions />
+            ) : (
+                <>
+                    <h1 className="menu__header">{title}</h1>
+                    <div className="menu__card">
+                        {filteredData.map((data, index) =>
+                            items.map((item, i) => (
+                                <MenuCard
+                                    key={i + index}
+                                    {...data}
+                                    title={item}
+                                    delayTime={i + index}
+                                />
+                            ))
+                        )}
+                    </div>
+                </>
+            )}
         </motion.div>
     )
 }
