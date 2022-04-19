@@ -9,12 +9,12 @@ import { ArrowSidebar } from '../ArrowSidebar'
 /**
  *
  * @param {name} name - The name of the component.
- * @param {item} item - The item of every dropdown button  .
+ * @param {items} items - The item of every dropdown button  .
  * @param {path} path - The URL path of the component.
  * @returns {any} of the DropdownItem component.
  */
 
-const DropdownItem = ({ name, item, path }) => {
+const DropdownItem = ({ title, items, path }) => {
     /**
      * @constant
      * @type {boolean} represents the state of the sidebar
@@ -38,19 +38,19 @@ const DropdownItem = ({ name, item, path }) => {
 
     /**
      * * Sets the state of the sidebar if window screen <= 639.
-     * * If the window screen is less than 639px,
+     * * If the window screen is less than 767px,
      * * return a toggleSidebar() function.
      */
     const handleCloseSidebar = () => {
         const { width } = window.screen
-        width <= 639 && toggleSidebar()
+        width <= 767 && toggleSidebar()
     }
 
     return (
         <li className={'sidebar__dropdown-item'}>
             <ButtonDropdown>
                 <button className={'sidebar__dropdown-button'} onClick={handleDropdownOpen}>
-                    {name}
+                    {title}
                     <span>
                         <ArrowSidebar isOpen={dropdownIsOpen} />
                     </span>
@@ -64,7 +64,7 @@ const DropdownItem = ({ name, item, path }) => {
                 transition={{
                     duration: 0.5
                 }}>
-                {item.map((el, i) => (
+                {items.map((el, i) => (
                     <motion.li
                         className={'sidebar__dropdown-collapse-item'}
                         key={i}
