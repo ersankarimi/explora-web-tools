@@ -9,10 +9,11 @@ import { Link } from 'react-router-dom'
  * @param {items} items - items of the menu card
  * @param {path} path - path of the menu card
  * @param {codeColor} codeColor - color code of the menu card
+ * @param {delayTime} delayTime - delay time of the menu card
  * @returns {JSX.Element} - JSX element of the MenuCard component
  */
 
-const MenuCard = ({ title, path, codeColor, i }) => {
+const MenuCard = ({ title, path, codeColor, delayTime }) => {
     /**
      * @type {array} represents code colors for the menu card
      */
@@ -31,7 +32,7 @@ const MenuCard = ({ title, path, codeColor, i }) => {
         },
         visible: (i) => ({
             opacity: 1,
-            transition: { delay: (i + 1) / 5, duration: 0.5, ease: 'easeInOut' }
+            transition: { delay: (delayTime + 1) / 5, duration: 0.5, ease: 'easeInOut' }
         })
     }
 
@@ -43,7 +44,7 @@ const MenuCard = ({ title, path, codeColor, i }) => {
                 transition: { duration: 0.25 }
             }}
             variants={childVariants}
-            custom={i}
+            custom={delayTime}
             initial="hidden"
             animate="visible">
             <Link
