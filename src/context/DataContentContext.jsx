@@ -15,7 +15,7 @@ const DataContentContextProvider = ({ children }) => {
         {
             title: 'CSS Tools',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
+                'Here you can find awesome CSS tools to ease you in creating your best front-end web projects',
             items: ['Relative Length Units', 'CSS Box Shadow'],
             path: 'css',
             extraClass: 'bg-gradient-to-tr from-[#8E2DE2] to-[#4A00E0]',
@@ -24,7 +24,7 @@ const DataContentContextProvider = ({ children }) => {
         {
             title: 'HTML Tools',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor',
+                'Here you can find awesome HTML tools to ease you in creating your best front-end web projects',
             items: [],
             path: 'html',
             extraClass: 'bg-gradient-to-tr from-[#f46b45] to-[#eea849]'
