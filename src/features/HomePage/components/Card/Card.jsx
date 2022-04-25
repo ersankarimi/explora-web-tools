@@ -1,6 +1,6 @@
 import React from 'react'
 import './Card.style.css'
-import { useDataContent } from '@hooks'
+import { useDataContent } from './../../../../hooks'
 import SingleCard from './SingleCard'
 
 /**

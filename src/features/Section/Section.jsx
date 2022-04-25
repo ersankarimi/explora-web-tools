@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { useDataContent } from '@hooks'
+import { useDataContent } from '../../hooks'
 import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { SectionCard } from './components/SectionCard'
 import './Section.style.css'
-import { UnderConstructions } from '@features/ui'
+import { UnderConstructions } from './../ui'
 
 /**
  * * Returns a Section component.

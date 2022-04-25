@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import { Navbar, Sidebar, Footer } from '@features/ui'
+import { Navbar, Sidebar, Footer } from './features/ui'
 import { motion } from 'framer-motion'
-import { useSidebar } from '@hooks'
+import { useSidebar } from './hooks'
 import './App.style.css'
 
 /**

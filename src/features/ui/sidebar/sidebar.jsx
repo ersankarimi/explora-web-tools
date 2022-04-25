@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { useSidebar } from '@hooks'
+import { useSidebar } from './../../../hooks'
 import './Sidebar.style.css'
 import { Dropdown } from './components'
 

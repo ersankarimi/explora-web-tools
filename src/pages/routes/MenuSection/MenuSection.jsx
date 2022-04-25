@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section } from '@features/Section'
+import { Section } from './../../../features/Section'
 
 /**
  ** Returns a MenuSection component.

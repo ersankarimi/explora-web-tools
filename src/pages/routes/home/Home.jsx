@@ -1,5 +1,5 @@
 import React from 'react'
-import { Homepage } from '@features/HomePage'
+import { Homepage } from './../../../features/Homepage'
 
 /**
  * * Returns the Homepage component.
