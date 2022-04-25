@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDataContent } from '@hooks'
-import { Outlet, useLocation, useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { SectionCard } from './components/SectionCard'
 import './Section.style.css'
@@ -59,6 +59,13 @@ const Section = () => {
      * @type {items} items - the items of the current section
      */
     const { title, items } = filteredData[0]
+
+    /**
+     * * useEffect hook to change the title.
+     */
+    useEffect(() => {
+        document.title = `${title} | Explora Web Tools`
+    })
 
     return (
         <motion.div className="menu" variants={parentVariants} initial="hidden" animate="visible">
