@@ -1,19 +1,19 @@
 import React from 'react'
-import './MenuCard.style.css'
+import './SectionCard.style.css'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useParams, useLocation } from 'react-router-dom'
 
 /**
- * * Returns a MenuCard component.
+ * * Returns a SectionCard component.
  * @param {title} title - title of the menu card
  * @param {items} items - items of the menu card
  * @param {path} path - path of the menu card
  * @param {codeColor} codeColor - color code of the menu card
  * @param {delayTime} delayTime - delay time of the menu card
- * @returns {JSX.Element} - JSX element of the MenuCard component
+ * @returns {JSX.Element} - JSX element of the SectionCard component
  */
 
-const MenuCard = ({ title, path, codeColor, delayTime }) => {
+const SectionCard = ({ title, path, codeColor, delayTime }) => {
     /**
      * @type {array} represents code colors for the menu card
      */
@@ -48,7 +48,7 @@ const MenuCard = ({ title, path, codeColor, delayTime }) => {
             initial="hidden"
             animate="visible">
             <Link
-                to={`/${path}/${title.split(' ').join('').toLowerCase()}/`}
+                to={`/${path}/${title.split(' ').join('').toLowerCase()}`}
                 className={`menu__card-item-link`}>
                 {title}
             </Link>
@@ -71,4 +71,4 @@ const MenuCard = ({ title, path, codeColor, delayTime }) => {
     )
 }
 
-export default MenuCard
+export default SectionCard

@@ -1,16 +1,16 @@
 import React from 'react'
 import { useDataContent } from '@hooks'
-import { useParams } from 'react-router-dom'
+import { Outlet, useLocation, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { MenuCard } from './components/MenuCard'
-import './Menu.style.css'
+import { SectionCard } from './components/SectionCard'
+import './Section.style.css'
 import { UnderConstructions } from '@features/ui'
 
 /**
- * * Returns a Menu component.
- * @returns {JSX.Element} Menu - JSX element of the Menu component.
+ * * Returns a Section component.
+ * @returns {JSX.Element} Section - JSX element of the Section component.
  */
-const Menu = () => {
+const Section = () => {
     /**
      * @constant
      * @type {object} dataContent - the dataContent object
@@ -21,14 +21,15 @@ const Menu = () => {
      * @constant
      * @type {object} sectionPath - the current section path
      */
-    const { sectionPath } = useParams()
+    const { pathname } = useLocation()
 
     /**
      * @constant
      * @type {array} filteredData - the filtered data based on the section path,
      * and the dataContent object in the context provider
      */
-    const filteredData = dataContent.filter((el) => el.path === sectionPath.replace('/', ''))
+    const filteredData = dataContent.filter((el) => el.path === pathname.split('/')[1])
+    console.log(filteredData)
 
     /**
      * @type {object} parentVariants - object of the parent variants motion.
@@ -69,7 +70,7 @@ const Menu = () => {
                     <div className="menu__card">
                         {filteredData.map((data, index) =>
                             items.map((item, i) => (
-                                <MenuCard
+                                <SectionCard
                                     key={i + index}
                                     {...data}
                                     title={item}
@@ -84,4 +85,4 @@ const Menu = () => {
     )
 }
 
-export default Menu
+export default Section
