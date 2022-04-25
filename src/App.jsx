@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import { Footer } from './features/ui/Footer'
+import Footer from './features/ui/Footer/Footer'
 import { Sidebar } from './features/ui/Sidebar'
 import { Navbar } from './features/ui/Navbar'
 import { motion } from 'framer-motion'
