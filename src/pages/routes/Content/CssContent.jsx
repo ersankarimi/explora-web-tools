@@ -15,9 +15,6 @@ const CssContent = () => {
     const { section } = useParams()
 
     switch (section) {
-        case 'relativelengthunits':
-            return <RelativeLengthUnits />
-
         default:
             return <UnderConstructions />
     }
