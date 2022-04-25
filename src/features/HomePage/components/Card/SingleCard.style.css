@@ -11,7 +11,7 @@
 }
 
 .card-item__description {
-    @apply font-inter text-sm tracking-wider text-white-65;
+    @apply mb-6 font-inter text-sm tracking-wider text-white-65;
 }
 
 .card-item__accent {
