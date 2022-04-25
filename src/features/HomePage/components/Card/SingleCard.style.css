@@ -1,0 +1,27 @@
+.card-item {
+    @apply mr-8 mt-8 flex h-72 max-h-max max-w-sm flex-col justify-between rounded-lg border-[1px] border-item-stroke bg-gradient-to-b from-main-card-dark-1 to-main-card-dark-2 shadow-item-shadow lg:max-h-64 lg:flex-row;
+}
+
+.card-item__text {
+    @apply mx-4 px-4 py-7;
+}
+
+.card-item__header {
+    @apply mb-2 font-poppins text-xl font-bold tracking-wide text-white-80 lg:text-2xl;
+}
+
+.card-item__description {
+    @apply mb-6 font-inter text-sm tracking-wider text-white-65;
+}
+
+.card-item__accent {
+    @apply h-12 w-full rounded-b-lg lg:h-full lg:w-1/2 lg:rounded-b-none lg:rounded-r-lg;
+}
+
+.btn-card {
+    @apply rounded-lg border-item-stroke px-4 py-2 shadow-item-shadow transition-all duration-200 ease-in hover:-translate-y-1;
+}
+
+.card-item__link {
+    @apply font-bold  text-white-100;
+}

@@ -1,0 +1,10 @@
+.under-construction {
+    @apply flex h-full flex-col items-center justify-center;
+}
+
+.under-construction_message {
+    @apply max-w-xs;
+}
+.under-construction_message > h2 {
+    @apply text-center font-poppins text-xl font-extrabold text-white-100 lg:text-3xl;
+}

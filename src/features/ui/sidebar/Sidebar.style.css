@@ -1,0 +1,17 @@
+.sidebar {
+    @apply flex w-screen sm:w-full;
+}
+
+.sidebar__nav {
+    @apply flex h-screen
+         w-full flex-col overflow-hidden bg-gradient-to-b from-main-bg-dark-1
+        to-main-bg-dark-2 text-white shadow-sidebar-shadow;
+}
+
+.sidebar__header {
+    @apply mt-4 mb-8  p-4 text-center font-poppins text-base font-bold text-white-100 lg:text-xl;
+}
+
+.sidebar__overlay {
+    @apply visible h-screen min-w-[50%] bg-black/60 backdrop-blur-lg sm:hidden;
+}

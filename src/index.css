@@ -1,4 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700;800&display=swap");
+
+body {
+    @apply overflow-x-hidden;
+}
+
+@layer components {
+    #root {
+        @apply relative
+        bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-2;
+        min-width: 98.72vw;
+        display: flex;
+    }
+}

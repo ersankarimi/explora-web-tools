@@ -1,0 +1,11 @@
+.home__header {
+    @apply mt-4 flex flex-col text-center lg:text-left;
+}
+
+.home__header-title {
+    @apply mb-2 font-poppins text-3xl font-extrabold text-white-100 xl:text-4xl;
+}
+
+.home__header-paragraph {
+    @apply font-inter text-sm text-white-65 lg:text-lg;
+}
