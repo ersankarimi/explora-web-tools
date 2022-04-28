@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { SidebarContext } from '@context'
 import { useSidebar } from '@hooks'
 import doubleArrow from './doubleArrow.svg'
 
