@@ -1,13 +1,15 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
-import { SidebarContextProvider } from '@context'
 import App from './App'
+import { SidebarContextProvider } from '@context'
 import { Home, MenuSection, CssContent } from '@pages'
 import { DataContentContextProvider } from '@context'
 
-ReactDOM.render(
+const rootElement = document.getElementById('root')
+const root = createRoot(rootElement)
+root.render(
     <SidebarContextProvider>
         <DataContentContextProvider>
             <BrowserRouter>
@@ -25,6 +27,5 @@ ReactDOM.render(
                 </Routes>
             </BrowserRouter>
         </DataContentContextProvider>
-    </SidebarContextProvider>,
-    document.getElementById('root')
+    </SidebarContextProvider>
 )
