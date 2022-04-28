@@ -1,6 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { RelativeLengthUnits } from '@features/Content'
 import { UnderConstructions } from '@features/ui'
 
 /**
