@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import { SidebarContextProvider } from '@context'
-import { Home, MenuSection, CssContent } from '@pages'
+import { Home, MenuSection, CssContent, ErrorPage } from '@pages'
 import { DataContentContextProvider } from '@context'
 
 const rootElement = document.getElementById('root')
@@ -23,6 +23,7 @@ root.render(
 
                         {/* HTML */}
                         <Route path="html" element={<MenuSection />}></Route>
+                        <Route path="*" element={<ErrorPage />}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>
