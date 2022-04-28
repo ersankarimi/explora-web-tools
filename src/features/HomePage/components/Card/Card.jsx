@@ -1,5 +1,4 @@
 import React from 'react'
-import './Card.style.css'
 import { useDataContent } from '@hooks'
 import SingleCard from './SingleCard'
 
@@ -10,7 +9,7 @@ import SingleCard from './SingleCard'
 const Card = () => {
     const dataContent = useDataContent()
     return (
-        <div className="card">
+        <div className="mt-16 flex flex-col flex-wrap items-center justify-center lg:flex-row lg:justify-start">
             {dataContent.map((item, i) => {
                 return <SingleCard {...item} key={i} />
             })}

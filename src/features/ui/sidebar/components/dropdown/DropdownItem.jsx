@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 import { useSidebar } from '@hooks'
-import './DropdownItem.style.css'
 import ButtonDropdown from './ButtonDropdown'
-import { ArrowSidebar } from '../ArrowSidebar'
+import { DropdownArrow } from './../DropdownArrow'
 
 /**
  *
@@ -47,17 +46,22 @@ const DropdownItem = ({ title, items, path }) => {
     }
 
     return (
-        <li className={'sidebar__dropdown-item'}>
+        <li className={'sidebar__dropdown-item text-white'}>
             <ButtonDropdown>
-                <button className={'sidebar__dropdown-button'} onClick={handleDropdownOpen}>
+                <button
+                    className={
+                        'sidebar__dropdown-button flex w-full justify-between px-6 py-2 font-inter text-sm font-semibold text-white-80 hover:bg-slate-50/10 md:text-base'
+                    }
+                    onClick={handleDropdownOpen}>
                     {title}
-                    <span>
-                        <ArrowSidebar isOpen={dropdownIsOpen} />
-                    </span>
+
+                    <DropdownArrow isOpen={dropdownIsOpen} />
                 </button>
             </ButtonDropdown>
             <motion.ul
-                className={'sidebar__dropdown-collapse'}
+                className={
+                    'sidebar__dropdown-collapse  my-2 ml-5 flex w-full flex-col justify-between gap-2 px-4 py-2'
+                }
                 animate={{
                     display: dropdownIsOpen ? 'block' : 'none'
                 }}
@@ -66,7 +70,9 @@ const DropdownItem = ({ title, items, path }) => {
                 }}>
                 {items.map((el, i) => (
                     <motion.li
-                        className={'sidebar__dropdown-collapse-item'}
+                        className={
+                            'sidebar__dropdown-collapse-item my-1 p-1 font-inter text-xs duration-100 ease-in hover:pl-3 md:text-sm'
+                        }
                         key={i}
                         animate={{
                             opacity: dropdownIsOpen ? 1 : 0

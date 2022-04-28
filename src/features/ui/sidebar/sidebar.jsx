@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useSidebar } from '@hooks'
-import './Sidebar.style.css'
 import { Dropdown } from './components'
 
 /**
@@ -54,15 +53,19 @@ const Sidebar = () => {
     }, [sidebarIsOpen])
 
     return (
-        <motion.aside className="sidebar">
-            <div className="sidebar__nav" onClick={handleShowHiddenSidebar}>
-                <h1 className="sidebar__header">
+        <motion.aside className="sidebar flex w-screen sm:w-full">
+            <div
+                className="sidebar__nav flex h-screen w-full flex-col overflow-hidden bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-2 text-white shadow-sidebar-shadow"
+                onClick={handleShowHiddenSidebar}>
+                <h1 className="sidebar__header mt-4 mb-8  p-4 text-center font-poppins text-base font-bold text-white-100 lg:text-xl">
                     <Link to={'/'}>Explora Web Tools</Link>
                 </h1>
 
                 <Dropdown />
             </div>
-            <div className="sidebar__overlay" onClick={handleShowHiddenSidebar}></div>
+            <div
+                className="sidebar__overlay visible h-screen min-w-[50%] bg-black/60 backdrop-blur-3xl sm:hidden"
+                onClick={handleShowHiddenSidebar}></div>
         </motion.aside>
     )
 }

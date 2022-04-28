@@ -1,5 +1,4 @@
 import React from 'react'
-import './Header.style.css'
 import { headerData } from './Header.data'
 
 /**
@@ -15,9 +14,13 @@ const Header = () => {
     const { title, description } = headerData
 
     return (
-        <div className="home__header">
-            <h1 className="home__header-title">{title}</h1>
-            <p className="home__header-paragraph">{description}</p>
+        <div className="home__header mt-4 flex flex-col text-center lg:text-left">
+            <h1 className="home__header-title mb-3 font-poppins text-3xl font-extrabold text-white-100 xl:text-4xl">
+                {title}
+            </h1>
+            <p className="home__header-paragraph font-inter text-sm text-white-65 lg:text-lg">
+                {description}
+            </p>
         </div>
     )
 }

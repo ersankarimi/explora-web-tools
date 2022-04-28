@@ -3,7 +3,6 @@ import { useDataContent } from '@hooks'
 import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { SectionCard } from './components/SectionCard'
-import './Section.style.css'
 import { UnderConstructions } from '@features/ui'
 
 /**
@@ -29,7 +28,6 @@ const Section = () => {
      * and the dataContent object in the context provider
      */
     const filteredData = dataContent.filter((el) => el.path === pathname.split('/')[1])
-    console.log(filteredData)
 
     /**
      * @type {object} parentVariants - object of the parent variants motion.
@@ -60,21 +58,20 @@ const Section = () => {
      */
     const { title, items } = filteredData[0]
 
-    /**
-     * * useEffect hook to change the title.
-     */
-    useEffect(() => {
-        document.title = `${title} | Explora Web Tools`
-    })
-
     return (
-        <motion.div className="menu" variants={parentVariants} initial="hidden" animate="visible">
+        <motion.div
+            className="flex h-full flex-col p-4"
+            variants={parentVariants}
+            initial="hidden"
+            animate="visible">
             {!items.length ? (
                 <UnderConstructions />
             ) : (
                 <>
-                    <h1 className="menu__header">{title}</h1>
-                    <div className="menu__card">
+                    <h1 className="mt-4 mb-8 text-center font-poppins text-4xl font-extrabold tracking-wide text-white-100 md:text-left lg:text-5xl">
+                        {title}
+                    </h1>
+                    <div className="flex h-full flex-col md:flex-row md:items-start md:justify-start">
                         {filteredData.map((data, index) =>
                             items.map((item, i) => (
                                 <SectionCard
