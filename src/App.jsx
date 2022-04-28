@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { Navbar, Sidebar, Footer } from '@features/ui'
 import { motion } from 'framer-motion'
 import { useSidebar } from '@hooks'
-import './App.style.css'
 
 /**
  * @returns {any} App - the main component.
@@ -43,10 +42,23 @@ const App = () => {
         }
     }, [window.innerWidth])
 
+    let { pathname } = useLocation()
+    pathname = pathname.split('/')[1]
+
+    useEffect(() => {
+        pathname === 'css'
+            ? (document.title =
+                  'CSS Tools | Explora web tools, The helper tools for web development')
+            : pathname === 'html'
+            ? (document.title =
+                  'HTML Tools | Explora web tools, The helper tools for web development')
+            : (document.title = 'Explora Web Tools | The helper tools for web development')
+    }, [pathname])
+
     return (
         <>
             <motion.div
-                className="container__sidebar"
+                className="container__sidebar sticky top-0 z-50 h-screen min-w-[50%] max-w-[50%] md:min-w-[30%] md:max-w-[30%] lg:min-w-[20%] lg:max-w-[20%]"
                 animate={{
                     x: sidebarIsOpen ? 0 : -400,
                     display: sidebarIsOpen ? 'block' : 'none'
@@ -57,9 +69,9 @@ const App = () => {
                 }}>
                 <Sidebar />
             </motion.div>
-            <div className="container__content" style={{ minHeight: '100vh' }}>
+            <div className="container__content flex min-h-screen flex-col">
                 <Navbar />
-                <div className="container__content-main">
+                <div className="relative h-full overflow-y-auto p-4 lg:py-4 lg:px-12">
                     <Outlet />
                 </div>
                 <Footer />
