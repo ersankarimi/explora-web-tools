@@ -1,2 +1,2 @@
-export * from './CssContent'
-export * from './HtmlContent'
+export * from './Css'
+export * from './Html'
