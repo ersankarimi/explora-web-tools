@@ -3,15 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply overflow-x-hidden;
-}
-
 @layer components {
     #root {
-        @apply relative
+        @apply relative flex
         bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-2;
-        min-width: 98.72vw;
         display: flex;
     }
+    .container__content {
+        flex: 2;
+    }
+    .sidebar__overlay {
+        -webkit-backdrop-filter: blur(90px);
+        backdrop-filter: blur(90px);
+    }
+}
+body {
+    overflow-x: hidden;
 }
