@@ -8,7 +8,7 @@ import { Card } from './components'
  */
 const Homepage = () => {
     return (
-        <div className="home">
+        <div className="home 3xl:flex 3xl:flex-col 3xl:items-center 3xl:justify-center">
             <Header />
             <Card />
         </div>
