@@ -68,7 +68,7 @@ const Section = () => {
                 <UnderConstructions />
             ) : (
                 <>
-                    <h1 className="mt-4 mb-8 text-center font-poppins text-4xl font-extrabold tracking-wide text-white-100 md:text-left lg:text-5xl">
+                    <h1 className="mt-4 mb-8 text-center font-poppins text-4xl font-extrabold tracking-wide text-white-100 md:mb-12 md:text-left lg:mb-16 lg:text-5xl">
                         {title}
                     </h1>
                     <div className="flex h-full flex-col md:flex-row md:items-start md:justify-start">

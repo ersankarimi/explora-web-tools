@@ -14,7 +14,7 @@ const Header = () => {
     const { title, description } = headerData
 
     return (
-        <div className="home__header mt-4 flex flex-col text-center lg:text-left">
+        <div className="home__header m-auto mt-4 flex flex-col text-center lg:text-left 3xl:max-w-[58%] 3xl:justify-center 3xl:text-center">
             <h1 className="home__header-title mb-3 font-poppins text-3xl font-extrabold text-white-100 xl:text-4xl">
                 {title}
             </h1>

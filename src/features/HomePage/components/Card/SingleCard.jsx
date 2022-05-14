@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
  */
 const SingleCard = ({ title, description, path, extraClass }) => {
     return (
-        <div className="mr-8 mt-8 flex h-72 max-h-max max-w-sm flex-col justify-between rounded-lg border-[1px] border-item-stroke bg-gradient-to-b from-main-card-dark-1 to-main-card-dark-2 shadow-item-shadow lg:max-h-64 lg:flex-row">
+        <div className="mr-8 mt-8 flex h-72 max-h-max max-w-sm flex-col justify-between rounded-lg border-[1px] border-item-stroke bg-gradient-to-b from-main-card-dark-1 to-main-card-dark-2 shadow-item-shadow lg:max-h-64 lg:flex-row 3xl:mr-16">
             <div className="mx-4 px-4 py-7">
                 <h1 className="mb-2 font-poppins text-xl font-bold tracking-wide text-white-80 lg:text-2xl">
                     {title}
