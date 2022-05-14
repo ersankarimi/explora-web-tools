@@ -11,11 +11,11 @@ import doubleArrow from './doubleArrow.svg'
 const Navbar = () => {
     /**
      * @constant
-     * @type {boolean} represents the state of the sidebar
+     * @type {boolean} sidebarIsOpen -  represents the state of the sidebar
      * @default true when the viewport is greater than 639px
      *
      * @constant
-     * @type {function} represents the function to toggle the sidebar
+     * @type {function} toggleSidebar -  represents the function to toggle the sidebar
      */
     const [sidebarIsOpen, toggleSidebar] = useSidebar()
 
@@ -24,7 +24,6 @@ const Navbar = () => {
      * @type {object} represents the motion object
      * @default motion object
      */
-    // variants motion for double arrow
     const variants = {
         notOpen: {
             x: [10, -50, 0],
