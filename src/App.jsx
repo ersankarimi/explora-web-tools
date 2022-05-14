@@ -57,8 +57,8 @@ const App = () => {
 
     return (
         <>
-            <motion.div
-                className="container__sidebar sticky top-0 z-50 h-screen min-w-[50%] max-w-[50%] md:min-w-[30%] md:max-w-[30%] lg:min-w-[20%] lg:max-w-[20%]"
+            <motion.aside
+                className="container__sidebar sticky top-0 z-50 h-screen min-w-[50%] max-w-[50%] md:min-w-[30%] md:max-w-[30%] lg:min-w-[15%] lg:max-w-[15%]"
                 animate={{
                     x: sidebarIsOpen ? 0 : -400,
                     display: sidebarIsOpen ? 'block' : 'none'
@@ -68,13 +68,17 @@ const App = () => {
                     type: 'spring'
                 }}>
                 <Sidebar />
-            </motion.div>
+            </motion.aside>
             <div className="container__content flex min-h-screen flex-col">
-                <Navbar />
-                <div className="relative h-full overflow-y-auto p-4 lg:py-4 lg:px-12">
+                <header>
+                    <Navbar />
+                </header>
+                <main className="relative h-full overflow-y-auto p-4 lg:py-4 lg:px-12">
                     <Outlet />
-                </div>
-                <Footer />
+                </main>
+                <footer>
+                    <Footer />
+                </footer>
             </div>
         </>
     )
