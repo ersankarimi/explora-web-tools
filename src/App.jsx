@@ -70,7 +70,7 @@ const App = () => {
                 <Sidebar />
             </motion.aside>
             <div className="container__content flex min-h-screen flex-col">
-                <header>
+                <header className="sticky top-0 z-30">
                     <Navbar />
                 </header>
                 <main className="relative h-full overflow-y-auto p-4 lg:py-4 lg:px-12">
