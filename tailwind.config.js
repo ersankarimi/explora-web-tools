@@ -18,6 +18,10 @@ module.exports = {
                 'main-card-dark-2': '#313949',
                 'main-sidebar-dark': '#313949',
 
+                // * Table Colors
+                'table-color-1': '#313949',
+                'table-color-2': '#374151',
+
                 // * Accent
                 'purple-accent': '#5219CF',
                 'coral-accent': '#FFAB91',
@@ -26,7 +30,7 @@ module.exports = {
                 'item-stroke': 'rgba(49,57,73,0.5)'
             },
             boxShadow: {
-                'item-shadow': '-10px -10px 20px rgba(72, 80, 99, 0.26), 10px 10px 20px #262C37',
+                'item-shadow': ' 10px 10px 20px #262C37, -10px -10px 20px rgba(72, 80, 99, 0.26)',
                 'sidebar-shadow':
                     '-10px -10px 20px rgba(57, 66, 83, 0.35), 10px 10px 20px rgba(24, 28, 39, 0.35)',
                 'hover-dropdown-shadow':
@@ -34,7 +38,8 @@ module.exports = {
                 'active-dropdown-shadow':
                     '5px -5px 10px rgba(72, 80, 99, 0.1), 5px 5px 10px rgba(24, 28, 39, 0.35), inset -2px -2px 4px rgba(72, 80, 99, 0.35), inset 5px 5px 5px #1D222E;',
                 'header-shadow':
-                    '-10px -10px 20px rgba(57, 66, 83, 0.35) 10px 10px 20px rgba(24, 28, 39, 0.35)'
+                    '-10px -10px 20px rgba(57, 66, 83, 0.35) 10px 10px 20px rgba(24, 28, 39, 0.35)',
+                'table-header-shadow': '0px 4px 8px rgba(0, 0, 0, 0.16)'
             },
             fontFamily: {
                 poppins: ['Poppins', 'sans-serif'],
