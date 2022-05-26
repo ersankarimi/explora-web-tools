@@ -10,7 +10,7 @@ import { RelativeLengthUnits } from '@features/Content'
 const CssContent = () => {
     /**
      * @constant
-     * @type {string} section - the current section pathname from the url params object
+     * @type {String} section - the current section pathname from the url params object
      */
     const { section } = useParams()
     switch (section) {

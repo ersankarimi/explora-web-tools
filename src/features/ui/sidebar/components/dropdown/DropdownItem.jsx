@@ -10,7 +10,7 @@ import { DropdownArrow } from './../DropdownArrow'
  * @param {name} name - The name of the component.
  * @param {items} items - The item of every dropdown button  .
  * @param {path} path - The URL path of the component.
- * @returns {any} of the DropdownItem component.
+ * @returns {Any} of the DropdownItem component.
  */
 
 const DropdownItem = ({ title, items, path }) => {

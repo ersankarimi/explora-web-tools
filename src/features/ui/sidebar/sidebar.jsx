@@ -6,16 +6,16 @@ import { Dropdown } from './components'
 
 /**
  * * Returns a Sidebar component.
- * @returns {any} of the Sidebar component.
+ * @returns {Any} of the Sidebar component.
  */
 const Sidebar = () => {
     /**
      * @constant
-     * @type {boolean} represents the state of the sidebar
+     * @type {Boolean} represents the state of the sidebar
      * @default true when the viewport is greater than 639px
      *
      * @constant
-     * @type {function} represents the function to toggle the sidebar
+     * @type {Function} represents the function to toggle the sidebar
      * @default useSidebar(SidebarContext)
      */
     const [sidebarIsOpen, toggleSidebar] = useSidebar()
@@ -25,9 +25,9 @@ const Sidebar = () => {
      * * if the innerWidth is <= 767px and,
      * *  target event doesn't have the className 'sidebar__dropdown-button' and 'arrow-button4.
      * @param {e} e - The event object.
-     * @type {number} innerWidth - The innerWidth of the window.
+     * @type {Number} innerWidth - The innerWidth of the window.
      * @type {boolean} sidebarIsOpen - The state of the sidebar.W
-     * @returns {any} of the toggleSidebar() function if the innerWidth <= 639.
+     * @returns {Any} of the toggleSidebar() function if the innerWidth <= 639.
      */
     const handleShowHiddenSidebar = (e) => {
         const { innerWidth } = window
@@ -41,9 +41,9 @@ const Sidebar = () => {
     /**
      * * Set and remove a class for body,
      * * if the sidebar is open and innerWidth <= 639, the body will have a class "overflow-hidden".
-     * @type {any} of the useEffect() function.
-     * @type {number} innerWidth - The innerWidth of the window.
-     * @type {boolean} sidebarIsOpen - The state of the sidebar.
+     * @type {Any} of the useEffect() function.
+     * @type {Number} innerWidth - The innerWidth of the window.
+     * @type {Boolean} sidebarIsOpen - The state of the sidebar.
      */
     useEffect(() => {
         const { innerWidth } = window

@@ -3,13 +3,14 @@ import { headerData } from './Header.data'
 
 /**
  * * Returns a header component for the main content section
- * @returns {any} component of header
+ * @returns {Any} component of header
  */
 const Header = () => {
     /**
+     * * Destructuring data from the headerData object
      * @constant
-     * @type {string} title - The title of the main content header section
-     * @type {string} description - The title for the main content header section
+     * @type {String} title - The title of the main content header section
+     * @type {String} description - The title for the main content header section
      */
     const { title, description } = headerData
 

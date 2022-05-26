@@ -5,23 +5,23 @@ import doubleArrow from './doubleArrow.svg'
 
 /**
  * * Returns a Navbar component.
- * @returns {any} of the Navbar components.
+ * @returns {Any} of the Navbar components.
  */
 
 const Navbar = () => {
     /**
      * @constant
-     * @type {boolean} sidebarIsOpen -  represents the state of the sidebar
+     * @type {Boolean} sidebarIsOpen -  represents the state of the sidebar
      * @default true when the viewport is greater than 639px
      *
      * @constant
-     * @type {function} toggleSidebar -  represents the function to toggle the sidebar
+     * @type {Function} toggleSidebar -  represents the function to toggle the sidebar
      */
     const [sidebarIsOpen, toggleSidebar] = useSidebar()
 
     /**
      * @constant
-     * @type {object} represents the motion object
+     * @type {Object} represents the motion object
      * @default motion object
      */
     const variants = {
@@ -36,7 +36,7 @@ const Navbar = () => {
     }
 
     return (
-        <header className="sticky top-0 z-30 flex min-w-full items-center bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-1/50 p-4 py-4 text-white shadow-header-shadow backdrop-blur-sm lg:px-8">
+        <header className="flex min-w-full items-center bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-1/90 p-4 py-4 text-white shadow-header-shadow backdrop-blur-sm lg:px-8">
             <motion.img
                 variants={variants}
                 animate={sidebarIsOpen ? 'open' : 'notOpen'}

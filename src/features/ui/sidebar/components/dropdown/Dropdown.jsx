@@ -4,7 +4,7 @@ import DropdownItem from './DropdownItem'
 
 /**
  * * Returns a Dropdown component.
- * @returns {any} of the Dropdown component.
+ * @returns {Any} of the Dropdown component.
  */
 const Dropdown = () => {
     const dataContent = useDataContent()

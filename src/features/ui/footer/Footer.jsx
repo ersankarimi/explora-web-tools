@@ -3,14 +3,13 @@ import githubIcon from './githubIcon.svg'
 
 /**
  * * Returns a Footer component.
- * @returns {any} of the Footer component.
+ * @returns {Any} of the Footer component.
  */
 const Footer = () => {
     /**
      * * This function handles the click event of the Github icon.
      * @type {Function} handleClickGithubIcon - Handles the click event of the Github icon.
      */
-
     const handleClickGithubIcon = () => {
         const { open } = window
         open('https://github.com/ersankarimi/explora-web-tools/')

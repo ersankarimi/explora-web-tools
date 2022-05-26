@@ -3,7 +3,7 @@ import { DataContentContext } from '@context'
 
 /**
  *
- * @returns {array} Data\ContentContext- the value is data of content.
+ * @returns {Array} DataContentContext- the value is data of content.
  */
 export const useDataContent = () => {
     return useContext(DataContentContext)

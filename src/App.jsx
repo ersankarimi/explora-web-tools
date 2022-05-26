@@ -5,16 +5,16 @@ import { motion } from 'framer-motion'
 import { useSidebar } from '@hooks'
 
 /**
- * @returns {any} App - the main component.
+ * @returns {Any} App - the main component.
  */
 const App = () => {
     /**
      * @constant
-     * @type {boolean} represents the state of the sidebar
+     * @type {Boolean} represents the state of the sidebar
      * @default true when the viewport is greater than 639px
      *
      * @constant
-     * @type {function} represents the function to toggle the sidebar
+     * @type {Function} represents the function to toggle the sidebar
      * @default useSidebar(SidebarContext)
      */
     const [sidebarIsOpen, toggleSidebar] = useSidebar()
@@ -45,6 +45,10 @@ const App = () => {
     let { pathname } = useLocation()
     pathname = pathname.split('/')[1]
 
+    /**
+     * * Check the path name and return the appropriate component.
+     * * Changes the title of the page.
+     */
     useEffect(() => {
         pathname === 'css'
             ? (document.title =

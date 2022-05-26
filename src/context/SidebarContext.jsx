@@ -7,7 +7,7 @@ const SidebarContext = createContext()
 
 /**
  * @param {children} children - the children of the component.
- * @returns {any} SidebarContext.Provider - the provider of the context,
+ * @returns {Any} SidebarContext.Provider - the provider of the context,
  * and the value of context type is array and the value is sidebarIsOpen and toggleSidebar function.
  */
 const SidebarContextProvider = ({ children }) => {

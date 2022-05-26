@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
  * @param description Is a description of the card.
  * @param path Is the URL path when we click on the card.
  * @param extraClass Is an additional class for the card.
- * @returns {any} of the SIngleCard component.
+ * @returns {Any} of the SIngleCard component.
  */
 const SingleCard = ({ title, description, path, extraClass }) => {
     return (

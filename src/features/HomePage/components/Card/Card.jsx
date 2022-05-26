@@ -4,7 +4,7 @@ import SingleCard from './SingleCard'
 
 /**
  *  * Returns an element thet contains all the cards we have using the <SingleCard/> component.
- * @returns {any} of the Card component.
+ * @returns {Any} of the Card component.
  */
 const Card = () => {
     const dataContent = useDataContent()

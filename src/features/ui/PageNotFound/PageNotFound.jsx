@@ -10,12 +10,12 @@ import { useNavigate } from 'react-router-dom'
  */
 const PageNotFound = () => {
     /**
-     * @type {function} navigate - React Router's navigate function to navigate to a page
+     * @type {Function} navigate - React Router's navigate function to navigate to a page
      */
     const navigate = useNavigate()
 
     /**
-     * @type {function} handleClick - Handles the click event on the back button
+     * @type {Function} handleClick - Handles the click event on the back button
      */
     const handleButtonClick = () => {
         navigate('/')

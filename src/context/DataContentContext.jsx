@@ -8,7 +8,7 @@ const DataContentContext = createContext()
 /**
  *
  * @param {children} children - the children of the component.
- * @returns {any} DataContentContext.Provider - the provider of the context,
+ * @returns {Any} DataContentContext.Provider - the provider of the context,
  */
 const DataContentContextProvider = ({ children }) => {
     const [data, setData] = useState([

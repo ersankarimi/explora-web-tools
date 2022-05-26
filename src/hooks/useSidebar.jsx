@@ -3,7 +3,7 @@ import { SidebarContext } from '@context'
 
 /**
  *
- * @returns {array} SidebarContext- the value is sidebarIsOpen and toggleSidebar() functions.
+ * @returns {Array} SidebarContext- the value is sidebarIsOpen and toggleSidebar() functions.
  */
 export const useSidebar = () => {
     return useContext(SidebarContext)

@@ -5,7 +5,7 @@ import arrow from './arrow.svg'
 /**
  * * Returns a DoubleArrow component
  * @param {isOpen} isOpen - represents the state of the sidebar
- * @returns {any} of the DoubleArrow component
+ * @returns {Any} of the DoubleArrow component
  */
 const DropdownArrow = ({ isOpen }) => {
     return (

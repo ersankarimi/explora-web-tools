@@ -1,6 +1,10 @@
 import React from 'react'
 import { AlertIcon } from './components/'
 
+/**
+ * * Returns the UnderConstruction component and rendered when the content is not available.
+ * @returns {JSX.Element} AlertIcon - JSX Element of the AlertIcon component.
+ */
 const UnderConstructions = () => {
     return (
         <div className="under-construction flex h-full flex-col items-center justify-center">

@@ -4,7 +4,7 @@ import { Card } from './components'
 
 /**
  * * Returns the Homepage component.
- * @returns {any} of the HomePage component.
+ * @returns {Any} of the HomePage component.
  */
 const Homepage = () => {
     return (

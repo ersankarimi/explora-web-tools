@@ -12,25 +12,25 @@ import { UnderConstructions } from '@features/ui'
 const Section = () => {
     /**
      * @constant
-     * @type {object} dataContent - the dataContent object
+     * @type {Object} dataContent - the dataContent object
      */
     const dataContent = useDataContent()
 
     /**
      * @constant
-     * @type {object} sectionPath - the current section path
+     * @type {Object} sectionPath - the current section path
      */
     const { pathname } = useLocation()
 
     /**
      * @constant
-     * @type {array} filteredData - the filtered data based on the section path,
+     * @type {Array} filteredData - the filtered data based on the section path,
      * and the dataContent object in the context provider
      */
     const filteredData = dataContent.filter((el) => el.path === pathname.split('/')[1])
 
     /**
-     * @type {object} parentVariants - object of the parent variants motion.
+     * @type {Object} parentVariants - object of the parent variants motion.
      */
     const parentVariants = {
         hidden: {
@@ -53,8 +53,8 @@ const Section = () => {
 
     /**
      * @constant
-     * @type {string} title - the title of the current section
-     * @type {items} items - the items of the current section
+     * @type {String} title - the title of the current section
+     * @type {Array} items - the items of the current section
      */
     const { title, items } = filteredData[0]
 

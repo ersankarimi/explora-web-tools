@@ -4,22 +4,16 @@ import { Link } from 'react-router-dom'
 
 /**
  * * Returns a SectionCard component.
- * @param {title} title - title of the menu card
- * @param {items} items - items of the menu card
- * @param {path} path - path of the menu card
- * @param {codeColor} codeColor - color code of the menu card
- * @param {delayTime} delayTime - delay time of the menu card
+ * @param {String} title - title of the menu card
+ * @param {String} path - path of the menu card
+ * @param {String} codeColor - color code of the menu card
+ * @param {Integer} delayTime - delay time of the menu card
  * @returns {JSX.Element} - JSX element of the SectionCard component
  */
 
 const SectionCard = ({ title, path, codeColor, delayTime }) => {
     /**
-     * @type {array} represents code colors for the menu card
-     */
-    const codeColors = codeColor.split(' ')
-
-    /**
-     * @type {object} childVariants - object of the child variants motion.
+     * @type {Object} childVariants - object of the child variants motion.
      */
     const childVariants = {
         hidden: {
