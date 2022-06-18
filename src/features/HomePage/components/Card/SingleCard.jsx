@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 /**
  * * Returns a single card for every section menu.
@@ -10,6 +10,19 @@ import { Link } from 'react-router-dom'
  * @returns {Any} of the SIngleCard component.
  */
 const SingleCard = ({ title, description, path, extraClass }) => {
+    /**
+     * @type {Function} navigate - Hook to navigate to the path.
+     */
+    let navigate = useNavigate()
+
+    /**
+     * * Navigate to the path when we click on the card.
+     * @param {String} path - The path to navigate to.
+     */
+    const handleClickButton = (path) => {
+        navigate(path)
+    }
+
     return (
         <div className="mr-8 mt-8 flex h-72 max-h-max max-w-sm flex-col justify-between rounded-lg border-[1px] border-item-stroke bg-gradient-to-b from-main-card-dark-1 to-main-card-dark-2 shadow-item-shadow lg:max-h-64 lg:flex-row 3xl:mr-16">
             <div className="mx-4 px-4 py-7">
@@ -21,6 +34,7 @@ const SingleCard = ({ title, description, path, extraClass }) => {
                 </p>
                 <button
                     type="button"
+                    onClick={() => handleClickButton(path)}
                     className={`${extraClass} rounded-lg border-item-stroke px-4 py-2 shadow-item-shadow transition-all duration-200 ease-in hover:-translate-y-1`}>
                     <Link to={path} className="card-item__link font-bold text-white-100">
                         More
