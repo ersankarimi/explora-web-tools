@@ -2,6 +2,7 @@ import React, { useReducer } from 'react'
 import { InputOutputForm, TableConversion } from './components'
 import { Dropdown } from '@features/ui'
 import { reducer, initialState, ACTIONS } from './hooks'
+import { motion } from 'framer-motion'
 
 /**
  * * Returns a component that renders the content of the Relative Length Units content.
@@ -86,8 +87,28 @@ const RelativeLengthUnits = () => {
         valueUnits: { inputUnit, outputUnit }
     } = state
 
+    // variants motion
+    const parentVariants = {
+        hidden: {
+            opacity: 0,
+            transition: {
+                duration: 2,
+                delay: 2,
+                ease: 'easeInOut'
+            }
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 1.5,
+                ease: 'easeInOut',
+                when: 'beforeChildren'
+            }
+        }
+    }
+
     return (
-        <>
+        <motion.div variants={parentVariants} initial="hidden" animate="visible">
             <h1 className="mt-4 mb-8 text-center font-poppins text-2xl font-extrabold tracking-wide text-white-100 lg:text-4xl">
                 Relative Length Units
             </h1>
@@ -111,7 +132,7 @@ const RelativeLengthUnits = () => {
                 />
             </div>
             <TableConversion {...{ inputUnit, outputUnit, fontSizeRoot, multiplier }} />
-        </>
+        </motion.div>
     )
 }
 
