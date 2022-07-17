@@ -35,7 +35,7 @@ const ColorPicker = ({ name, optionValue, id, handleChangeValue }) => {
         </div>
         <motion.div
           className="w-full"
-          variants={colorVariants}
+          variants={colorPickerVariants}
           initial="hidden"
           animate={colorIsOpen ? 'visible' : 'hidden'}>
           <ChromePicker
