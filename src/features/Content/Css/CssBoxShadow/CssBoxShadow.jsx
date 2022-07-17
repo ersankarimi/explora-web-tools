@@ -5,7 +5,6 @@ import { Options } from './components'
 const CssBoxShadow = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
   const { shadowOptionItems } = state
-  console.log('STATEEEEEEE', state)
 
   const handleChangeOptionValue = (optionValue, itemId, optionName = null) => {
     dispatch({
