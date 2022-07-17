@@ -9,6 +9,7 @@
     "dependencies": {
         "framer-motion": "^6.2.9",
         "react": "^18.0.0",
+        "react-color": "^2.19.3",
         "react-dom": "^18.0.0",
         "react-router-dom": "^6.3.0"
     },
@@ -25,13 +26,13 @@
         ]
     },
     "devDependencies": {
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "@vitejs/plugin-react": "^1.3.0",
         "autoprefixer": "^10.4.4",
         "prettier": "^2.5.1",
         "prettier-plugin-tailwindcss": "^0.1.5",
         "vitawind": "^2.2.4",
-        "@types/react": "^18.0.0",
-        "@types/react-dom": "^18.0.0",
-        "@vitejs/plugin-react": "^1.3.0",
         "vite": "^2.9.5"
     }
 }
