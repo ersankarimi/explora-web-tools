@@ -4,19 +4,40 @@
 @tailwind utilities;
 
 @layer components {
-    #root {
-        @apply relative flex
+  #root {
+    @apply relative flex
         bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-2;
-        display: flex;
-    }
-    .container__content {
-        flex: 2;
-    }
-    .sidebar__overlay {
-        -webkit-backdrop-filter: blur(90px);
-        backdrop-filter: blur(90px);
-    }
+    display: flex;
+  }
+  .container__content {
+    flex: 2;
+  }
+  .sidebar__overlay {
+    -webkit-backdrop-filter: blur(90px);
+    backdrop-filter: blur(90px);
+  }
+  .slider {
+    @apply h-2 w-full appearance-none rounded-md bg-white-80 opacity-95;
+  }
+
+  .slider:hover {
+    @apply opacity-100;
+  }
+
+  .slider::-webkit-slider-thumb {
+    @apply h-4 w-4 cursor-pointer appearance-none 
+    rounded-full border-2 border-solid border-white-65 bg-main-bg-dark-1
+    hover:ring-1 hover:ring-white-65;
+    box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+
+  .slider::-moz-range-thumb {
+    @apply h-4 w-4 cursor-pointer appearance-none 
+    rounded-full border-2 border-solid border-white-65 bg-main-bg-dark-1
+    focus:ring-1 focus:ring-white-80;
+    box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
 }
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
