@@ -59,7 +59,7 @@ const CssBoxShadow = () => {
 
   return (
     <>
-      <h1 className="mt-4 mb-8 text-center font-poppins text-2xl font-extrabold tracking-wide text-white-100 lg:text-4xl">
+      <h1 className="mt-4 mb-8 text-center font-poppins text-2xl font-extrabold tracking-wide text-white-100 lg:mb-12 lg:text-4xl">
         CSS Box Shadow
       </h1>
 
