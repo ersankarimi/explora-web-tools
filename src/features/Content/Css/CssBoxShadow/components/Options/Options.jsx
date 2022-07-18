@@ -25,7 +25,7 @@ const Options = ({
         <button
           onClick={handleAddShadow}
           type="button"
-          className="w-full rounded-md bg-button-dark-light px-4 py-[6px] font-poppins text-xs font-bold text-white-80 shadow-table-header-shadow hover:text-white-100 xl:w-[80%]">
+          className="w-full rounded-md bg-button-dark-light px-4 py-[6px] font-poppins text-sm font-bold text-white-80 shadow-table-header-shadow hover:text-white-100 xl:w-[80%]">
           Add Shadow
         </button>
       </div>

@@ -6,10 +6,10 @@ const Slider = ({ name, optionValue, id, handleChangeValue }) => {
       <div className="my-2 flex w-full justify-between">
         <label
           htmlFor={`${name.replace('O', '-o')}${id}`}
-          className="font-inter text-sm font-normal italic text-white-65">
+          className="font-inter text-xs font-normal italic text-white-65">
           {name.replace('O', '-o')}
         </label>
-        <h3 className="font-inter text-sm font-normal text-white-65">{optionValue}px</h3>
+        <h3 className="font-inter text-xs font-normal text-white-65">{optionValue}px</h3>
       </div>
       <input
         id={`${name.replace('O', '-o')}${id}`}

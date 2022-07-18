@@ -15,7 +15,7 @@ const ColorPicker = ({ name, optionValue, id, handleChangeValue }) => {
       <motion.div className=" relative my-2 flex w-full flex-col items-start justify-start">
         <label
           htmlFor={`${name}${id}`}
-          className="font-inter text-sm font-normal italic text-white-65">
+          className="font-inter text-xs font-normal italic text-white-65">
           {name}
         </label>
         <div className="mt-1 flex w-full">
