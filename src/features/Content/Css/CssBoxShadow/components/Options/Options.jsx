@@ -16,7 +16,7 @@ const Options = ({
   handleAddShadow
 }) => {
   return (
-    <div className="min-w-xs flex min-h-[186px] w-full max-w-xs flex-col items-center justify-center overflow-hidden rounded-lg  bg-table-color-1 pb-7 text-center shadow-item-shadow xl:max-w-md">
+    <div className="min-w-xs flex min-h-[186px] w-full max-w-xs flex-col items-center justify-center overflow-hidden rounded-lg  bg-table-color-1 pb-7 text-center shadow-item-shadow md:max-w-sm xl:max-w-md">
       <div className="flex w-full items-center justify-center bg-main-card-dark-2 py-3 font-poppins text-sm font-semibold text-white-80 shadow-table-header-shadow xl:text-base">
         Options
       </div>
