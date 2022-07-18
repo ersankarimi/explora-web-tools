@@ -23,7 +23,7 @@ const Slider = ({ name, optionValue, id, handleChangeValue }) => {
         id={`${name.replace('O', '-o')}${id}`}
         type="range"
         className="slider"
-        min={-100}
+        min={/spread|blur/.test(name) ? 0 : -100}
         step={1}
         max={100}
         value={optionValue}
