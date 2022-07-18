@@ -7,7 +7,7 @@
 const initialState = {
   shadowOptionItems: [
     {
-      isOpen: false,
+      isOpen: true,
       id: new Date().getMilliseconds(),
       dataShadowValues: {
         hOffset: 10,
@@ -15,7 +15,7 @@ const initialState = {
         blur: 10,
         spread: 10,
         color: 'rgba(0, 0, 0, 0.6)',
-        inset: true
+        inset: false
       }
     }
   ]
