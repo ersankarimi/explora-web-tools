@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import { reducer, initialState, ACTIONS } from './hooks'
-import { Options } from './components'
+import { Options, Preview } from './components'
 
 /**
  * * Returns a component that renders the content of the CSS Box Shadow content.
@@ -63,10 +63,14 @@ const CssBoxShadow = () => {
         CSS Box Shadow
       </h1>
 
-      <div className="m-auto mt-12 flex w-full justify-center">
+      <div className="mt-8 flex flex-col items-center justify-center xl:flex-row xl:items-start xl:justify-between">
         <Options
           {...{ shadowOptionItems, handleChangeOptionValue, handleDeleteShadow, handleAddShadow }}
         />
+
+        <div className="mt-4 flex w-full flex-col items-center justify-center xl:ml-4 xl:mt-0">
+          <Preview shadowOptionItems={shadowOptionItems} />
+        </div>
       </div>
     </>
   )
