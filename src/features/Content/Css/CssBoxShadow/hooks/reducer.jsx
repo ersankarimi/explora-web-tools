@@ -1,3 +1,9 @@
+/**
+ * @constant
+ * @type {Object} initailState - represents the initial state of the component.
+ * @type {Array} shadowOptionItems - represents the array object of every shadow option item.
+ */
+
 const initialState = {
   shadowOptionItems: [
     {
@@ -15,12 +21,25 @@ const initialState = {
   ]
 }
 
+/**
+ * @constant
+ * @type {Object} ACTIONS - represents the actions of the component.
+ * @type {String} UPDATE_OPTION_VALUE - represents the action to update the option value.
+ * @type {String} DELETE_SHADOW - represents the action to delete a shadow.
+ * @type {String} ADD_SHADOW - represents the action to add a shadow.
+ */
 const ACTIONS = {
   UPDATE_OPTION_VALUE: 'update_option_value',
   DELETE_SHADOW: 'delete_shadow',
   ADD_SHADOW: 'add_shadow'
 }
 
+/**
+ *
+ * @param {Object} state - represents the current state of the component.
+ * @param {Object} action - represents the action to be dispatched.
+ * @returns
+ */
 const reducer = (state, action) => {
   const { type, payload } = action
   const { UPDATE_OPTION_VALUE, DELETE_SHADOW, ADD_SHADOW } = ACTIONS

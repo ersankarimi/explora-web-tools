@@ -1,6 +1,14 @@
 import React from 'react'
 import { DropdownBoxShadow } from './components'
 
+/**
+ * * Returns the options for the dropdown box shadow component.
+ * @param {Array} shadowOptionItems - represents the array object of every shadow option item.
+ * @param {Function} handleUpdateOptionValue - represents the function to update the option value.
+ * @param {Function} handleDeleteShadow - represents the function to delete a shadow.
+ * @param {Function} handleAddShadow - represents the function to add a shadow.
+ * @returns {JSX.Element} DropdownBoxShadow - JSX Element of the options component.
+ */
 const Options = ({
   shadowOptionItems,
   handleChangeOptionValue,

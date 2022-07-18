@@ -1,6 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+/**
+ * * ArrowSvg contains the svg arrow.
+ * @param {Booelan} isOpen - represents the state of the component.
+ * @returns ArraySvg component
+ */
 const ArrowSvg = ({ isOpen }) => {
   return (
     <motion.svg

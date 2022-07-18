@@ -1,3 +1,8 @@
+/**
+ * * insetVariants contains rules for animation.
+ * @constant
+ * @type {Object} insetVariants - represents the color inset variants.
+ */
 export const insetVariants = {
   hidden: {
     opacity: 0,

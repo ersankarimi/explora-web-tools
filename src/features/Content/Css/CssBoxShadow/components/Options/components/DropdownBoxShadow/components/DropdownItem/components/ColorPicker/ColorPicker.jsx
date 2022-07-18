@@ -3,9 +3,26 @@ import { motion } from 'framer-motion'
 import { ChromePicker } from 'react-color'
 import { colorPickerVariants } from './colorPickerAnimation'
 
+/**
+ * * Component to display the color picker.
+ * @param {String} name - represents the name of the option shadow.
+ * @param {String} optionValue - represents the value of the color option shadow.
+ * @param {Number} id - represents the id of the item shadow.
+ * @param {Function} handleChangeValue - represents the function to update the option value.
+ * @returns {JSX.Element} ColorPicker - JSX Element of the color picker component.
+ */
 const ColorPicker = ({ name, optionValue, id, handleChangeValue }) => {
+  /**
+   * * Make the state for the color picker.
+   * @type {Boolean} colorIsOpen - represents the state of the color picker is open or not.
+   * @type {Function} setColorIsOpen - represents the function to update the state of the color picker is open or not.
+   * @default false
+   */
   const [colorIsOpen, setColorIsOpen] = useState(false)
 
+  /**
+   * * Function to update the state of the color picker is open or not.
+   */
   const handleColorIsOpen = () => {
     setColorIsOpen(!colorIsOpen)
   }

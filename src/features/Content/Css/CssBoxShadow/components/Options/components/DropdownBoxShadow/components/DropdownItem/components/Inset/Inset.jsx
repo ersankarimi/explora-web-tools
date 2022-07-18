@@ -2,6 +2,14 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { insetVariants } from './insetAnimation'
 
+/**
+ * * Component to display the inset option.
+ * @param {String} name - represents the name of the option shadow.
+ * @param {Booelan} optionValue - represents the value of the option shadow.
+ * @param {Number} id - represents the id of the item shadow.
+ * @param {Function} handleChangeValue - represents the function to update the option value.
+ * @returns  {JSX.Element} Inset - JSX Element of the inset component.
+ */
 const Inset = ({ name, optionValue, id, handleChangeValue }) => {
   return (
     <>

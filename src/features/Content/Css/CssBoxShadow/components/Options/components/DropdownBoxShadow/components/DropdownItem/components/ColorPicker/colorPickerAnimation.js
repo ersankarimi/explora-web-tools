@@ -1,3 +1,8 @@
+/**
+ * * colorPickerVariants contains rules for animation.
+ * @constant
+ * @type {Object} colorPickerVariants - represents the color picker variants.
+ */
 export const colorPickerVariants = {
   hidden: {
     opacity: 0,

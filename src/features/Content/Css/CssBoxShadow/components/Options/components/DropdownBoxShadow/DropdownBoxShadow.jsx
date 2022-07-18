@@ -1,16 +1,30 @@
 import React from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ArrowSvg, DropdownItem } from './components'
 import { ulVariants, liVariants } from './dropdownBoxShadowAnimation'
 
+/**
+ * * Returns the options for the dropdown button box shadow component.
+ * @param {Array} shadowOptionItems - represents the array object of every shadow option item.
+ * @param {Function} handleChangeOptionValue - represents the function to update the option value.
+ * @param {Function} handleDeleteShadow - represents the function to delete a shadow.
+ * @returns {JSX.Element} DropdownBoxShadow - JSX Element of the button dropdown component
+ */
 const DropdownBoxShadow = ({ shadowOptionItems, handleChangeOptionValue, handleDeleteShadow }) => {
+  /**
+   * * Returns the options for the dropdown button box shadow component.
+   * @param {Boolean} condition - represents the condition to check.
+   * @param {Number} id - represents the id of the shadow.
+   * @param {Object} e - represents the event object.
+   * @returns if parent.id === "dropdown-button" || parentTwo.id === "dropdown-button" then return the handleChangeOptionValue function else return null.
+   */
   const handleClickDropdown = (condition, id, e) => {
     const parent = e.target.parentElement
     const parentTwo = e.target.parentElement.parentElement
     if (parent.id === 'dropdown-button' || parentTwo.id === 'dropdown-button') {
       return handleChangeOptionValue(condition, id, null)
     }
-    return
+    return null
   }
 
   return (

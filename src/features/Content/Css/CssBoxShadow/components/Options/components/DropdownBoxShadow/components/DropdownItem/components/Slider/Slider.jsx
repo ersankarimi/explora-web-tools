@@ -1,5 +1,13 @@
 import React from 'react'
 
+/**
+ * * Return a component which represents the slider.
+ * @param {String} name - represents the name of the option shadow.
+ * @param {String} optionValue - represents the value of the color option shadow.
+ * @param {Number} id - represents the id of the item shadow.
+ * @param {Function} handleChangeValue - represents the function to update the option value.
+ * @returns {JSX.Element} DropdownItem - JSX Element of the slider component.
+ */
 const Slider = ({ name, optionValue, id, handleChangeValue }) => {
   return (
     <>
