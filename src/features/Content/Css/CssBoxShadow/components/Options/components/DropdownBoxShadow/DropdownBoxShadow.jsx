@@ -39,7 +39,7 @@ const DropdownBoxShadow = ({ shadowOptionItems, handleChangeOptionValue, handleD
               onClick={(e) => handleClickDropdown(!isOpen, id, e)}
               layout>
               <div className="flex w-full items-center justify-between">
-                <span className="flex h-full w-1/2 items-center font-inter text-sm font-normal text-white-80">
+                <span className="flex h-full w-1/2 items-center font-inter text-xs font-normal text-white-80">
                   {shadowOptionItems.length > 1 && (
                     <motion.svg
                       className="mr-2 h-4 w-5 fill-white-65 hover:fill-white-80"
