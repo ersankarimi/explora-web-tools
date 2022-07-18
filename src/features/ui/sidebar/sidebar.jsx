@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useSidebar } from '@hooks'
 import { Dropdown } from './components'
@@ -53,7 +52,7 @@ const Sidebar = () => {
   }, [sidebarIsOpen])
 
   return (
-    <motion.div className="sidebar flex w-screen sm:w-full">
+    <div className="sidebar flex w-screen sm:w-full">
       <div
         className="sidebar__nav flex h-screen w-full flex-col overflow-hidden bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-2 text-white shadow-sidebar-shadow"
         onClick={handleShowHiddenSidebar}>
@@ -66,7 +65,7 @@ const Sidebar = () => {
       <div
         className="sidebar__overlay visible h-screen min-w-[50%] bg-black/60 backdrop-blur-3xl sm:hidden"
         onClick={handleShowHiddenSidebar}></div>
-    </motion.div>
+    </div>
   )
 }
 export default Sidebar
