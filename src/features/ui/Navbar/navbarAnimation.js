@@ -5,11 +5,15 @@
  */
 export const variants = {
   notOpen: {
-    x: [10, -50, 0],
-    rotate: 180
+    rotate: 180,
+    transition: {
+      duration: 0.01
+    }
   },
   open: {
-    x: [-10, 50, 0],
-    rotate: 360
+    rotate: 360,
+    transition: {
+      duration: 0.01
+    }
   }
 }
