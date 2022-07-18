@@ -24,6 +24,7 @@ const Navbar = () => {
     <header className="flex min-w-full items-center bg-gradient-to-b from-main-bg-dark-1 to-main-bg-dark-1/90 p-4 py-4 text-white shadow-header-shadow backdrop-blur-sm lg:px-8">
       <motion.img
         variants={variants}
+        initial={false}
         animate={sidebarIsOpen ? 'open' : 'notOpen'}
         transition={{
           duration: 0.5,
